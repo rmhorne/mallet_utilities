@@ -78,10 +78,17 @@ The script reads a config file like the one outlined below:
 1. The script outputs your results into a directory structure that looks like this: `directory/topicCount/optimizationValue`, where `directory` is the location you specified in the command line, `topicCount` is one of the number of topics choices taken from you config file, and `optimizationValue` is an optimization interval, also taken from your config file.
 
 2. Depending on your choice of commands in the config file, you will have a number of files in each directory. Using the "default" config, you will see the following:
+
  * `keys_[Edges].csv`: A .csv with `source` and `target` columns created from the `--output-topic-keys` mallet option. The `source` column is the topic number, while the `target` column is an individual word.
+
  * `keys.txt`: Standard output from the `--output-topic-keys` mallet option.
+
  * `state.gz`: Standard output from the `--output-state` mallet option.
+
  * `topicCounts_All[Edges].csv`: A .csv with `source`,`target`, and `frequency` columns created from the `--word-topic-counts-file` mallet option. The `source` column is the topic number, while the `target` column is an individual word, and the `frequency` column is number of times the word is assigned to the topic in the corpus. This .csv file lists *all* words displayed as a result of the `--word-topic-counts-file` mallet option.
+
  * `topicCounts_Shared[Edges].csv`: Exactly the same as the `topicCounts_All[Edges].csv` file, except *only* words that appear in *more than one* topic are listed.
+
  * `topicCounts.txt`: Standard output from the `--word-topic-counts-file` mallet option.
+
  * `topicsCompostion.txt`: Standard output from the `--output-doc-topics` mallet option.
