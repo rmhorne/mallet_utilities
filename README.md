@@ -7,7 +7,7 @@ Utilities for parsing / examining output from [Mallet](http://mallet.cs.umass.ed
 The main script, `bamMallet.py`, runs analysis on a .mallet file with configuration options in `bamMalletConfig.json`, outputs the results into a specified directory structure, and creates some .csv files for use with Gephi, R, or other SNA applications.
 It does *not* import topics into the .mallet format, as you will almost certainly want to configure different stop words and other options.
 
-Once you have produced a .mallet file, you can invoke this utility by calling `bamMallet.py malletFileLocation bamMalletConfigFileName directoryLocation`
+Once you have produced a .mallet file, you can invoke this utility by calling `python bamMallet.py malletFileLocation bamMalletConfigFileName directoryLocation`
 
 ## Script Parameters:
 1. `malletFileLocation`: The path to your .mallet file.
