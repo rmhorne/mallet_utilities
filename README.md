@@ -12,11 +12,11 @@ Once you have produced a .mallet file, you can invoke this utility by calling `p
 ## Script Parameters:
 1. `malletFileLocation`: The path to your .mallet file.
 
-2. `bamMalletConfigFileName`: the path to your .json configuration file
+2. `bamMalletConfigFileName`: the path to your .json configuration file.
 
 3. `numberOfKeys`: the number of Keys to display; this parameter is used in Mallet's `--num-top-words` option.
 
-4. `directoryLocation`: Where you want the output directory structure placed relative to the invoked script
+4. `directoryLocation`: Where you want the output directory structure placed relative to the invoked script.
 
 The script fires Mallet's `mallet train-topics` command for each specified `--num-iterations` value for a specified number of different `--optimize-interval` values for a specified number of `--num-topics` values, which are specified in a .json config file.
 
@@ -97,13 +97,13 @@ The script reads a config file like the one outlined below:
 ```
 ### json parameters:
 
-1. `malletInstallDirectory`: Where you installed Mallet
+1. `malletInstallDirectory`: Where you installed Mallet.
 
 2. `iterations`: A list of the number of iterations to run. This sets Mallet's `--num-iterations` option.
 
-3. `topicCounts`: A list of the number of topic counts you want to run on your corpus
+3. `topicCounts`: A list of the number of topic counts you want to run on your corpus.
 
-4. `optimizationIntervals`: A list of the different optimization intervals you want to run for each of your topic counts
+4. `optimizationIntervals`: A list of the different optimization intervals you want to run for each of your topic counts.
 
 5. `commands`: A list of Mallet commands that you want to run on each combination of topic count and optimization variables. Each command is specified by the `command` value, the output file name is specified by the `output` value. For a list of commands, see [http://mallet.cs.umass.edu/topics.php](http://mallet.cs.umass.edu/topics.php)
 
