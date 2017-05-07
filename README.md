@@ -18,7 +18,7 @@ Once you have produced a .mallet file, you can invoke this utility by calling `p
 
 4. `directoryLocation`: Where you want the output directory structure placed relative to the invoked script.
 
-The script fires Mallet's `mallet train-topics` command for each specified `--num-iterations` value for a specified number of different `--optimize-interval` values for a specified number of `--num-topics` values, which are specified in a .json config file.
+The script fires Mallet's `mallet train-topics` command for each `--num-iterations` value for each different `--optimize-interval` value for each `--num-topics` value, all of which are specified in a .json config file.
 
 For example, if you had `[1, 2]` for your iteration values, `[3, 4, 5]` for your  optimization values, and `[10, 50]` for your number of topics, the script will invoke `mallet train-topics` 12 times (with any additional commands specified in your config file), as represented below:
 
